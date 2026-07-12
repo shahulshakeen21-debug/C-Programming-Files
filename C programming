@@ -1,0 +1,181 @@
+1. Addition of two Numbers
+
+#include<stdio.h>
+int main()
+{
+int a,b,c;
+printf("Enter the 2 numbers:");
+scanf("%d %d",&a,&b);
+c = a+b;
+printf("sum = %d",c);
+return 0;
+}
+
+output:
+Enter the 2 numbers:4
+5
+sum = 9
+
+2.Circumference
+
+#include<stdio.h>
+int main()
+{
+    float radius,circumference;
+    printf(" Enter the radius:");
+    scanf("%f",&radius);
+    float pi =3.14791;
+    circumference = 2*pi*radius;
+    printf("Circumference = %.2f", circumference);
+    return 0;
+}
+
+output:
+Enter the radius:5
+Circumference = 31.48
+
+3.Area of Triangle
+
+#include <stdio.h>
+
+int main() {
+    float base, height, area;
+
+    printf("Enter base and height: ");
+    scanf("%f %f", &base, &height);
+
+    area = 0.5 * base * height;
+
+    printf("Area of Triangle = %.2f", area);
+
+    return 0;
+}
+
+output:
+Enter base and height: 4
+5
+Area of Triangle = 10.00
+
+4.Greatest of 3 Numbers
+
+#include<stdio.h>
+int main()
+{
+    int a,b,c,greatest;
+    printf(" Enter the 3 numbers:");
+    scanf(" %d %d %d",&a,&b,&c);
+    greatest = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    printf(" greatest =%d",greatest);
+    return 0;
+}
+
+output:
+Enter the 3 numbers:90
+100
+75
+ greatest =100
+
+5.Divisible by 5 and 7
+
+#include<stdio.h>
+int main(){
+  int a;
+  printf(" Enter a number:");
+  scanf("%d",&a);
+  if(a%5==0)
+  {
+  printf("divisible by 5");
+  } else if (a%7==0)
+  {
+  printf("divisble by 7");
+  }
+  else{
+   printf(" not divisible by both");
+   }
+return 0;
+  }
+
+output:
+ Enter a number:30
+divisible by 5
+
+6.positive or negative
+
+ #include <stdio.h>
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num >= 0) {
+        printf(positive);
+    } else {
+        printf(negative);
+    }
+
+    return 0;
+}
+ 
+output:
+Enter a number:-3
+negative
+
+ Enter a number:8
+ positive
+
+7.3 digit number 
+
+#include <stdio.h>
+
+int main() {
+    int a;
+
+    printf("Enter a number: ");
+    scanf("%d", &a);
+
+    if (a < 100) {
+        printf("It is not a 3-digit number.");
+    }
+    else if (a >= 100 && a <= 999) {
+        printf("It is a 3-digit number.");
+    }
+    else {
+        printf("It is not a 3-digit number.");
+    }
+
+    return 0;
+}
+
+output:
+
+Enter a number: 90
+It is not a 3-digit number
+Enter a number: 200
+It is a 3-digit number.
+
+
+8. multiply of 11 and 32
+
+#include <stdio.h>
+
+int main() {
+    int a;
+
+    printf("Enter a number: ");
+    scanf("%d", &a);
+
+    if (a % 11 == 0 && a % 32 == 0) {
+        printf("The number is divisible by both 11 and 32.");
+    } else {
+        printf("The number is not divisible by both 11 and 32.");
+    }
+
+    return 0;
+}
+
+output:
+Enter a number: 352
+The number is divisible by both 11 and 32.
+
+Enter a number: 44
+The number is not divisible by both 11 and 32.
+
