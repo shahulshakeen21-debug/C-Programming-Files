@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, c, ch;
+
+    printf("Enter 3 numbers: ");
+    scanf("%d%d%d", &a, &b, &c);
+
+    if (a > b && a > c)
+        ch = 1;
+    else if (b > c)
+        ch = 2;
+    else
+        ch = 3;
+
+    switch (ch)
+    {
+        case 1:
+            printf("A is greater");
+            break;
+
+        case 2:
+            printf("B is greater");
+            break;
+
+        case 3:
+            printf("C is greater");
+            break;
+    }
+
+    return 0;
+}
+
+output:
+
+Enter 3 numbers: 90
+60
+80
+A is greater
