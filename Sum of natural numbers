@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int i = 1, n, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    while(i <= n)
+    {
+        sum = sum + i;
+        i++;
+    }
+
+    printf("Sum of first %d natural numbers = %d", n, sum);
+
+    return 0;
+}
+output:
+
+Enter a number: 4
+Sum of first 4 natural numbers = 10
