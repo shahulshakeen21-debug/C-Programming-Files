@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+enum day
+{
+    MON,
+    TUE,
+    WED,
+    THU,
+    FRI,
+    SAT,
+    SUN
+};
+
+int main()
+{
+    enum day today;
+
+    printf("Enter day (0-6): ");
+    scanf("%d", &today);
+
+    switch(today)
+    {
+        case MON: printf("Monday"); break;
+        case TUE: printf("Tuesday"); break;
+        case WED: printf("Wednesday"); break;
+        case THU: printf("Thursday"); break;
+        case FRI: printf("Friday"); break;
+        case SAT: printf("Saturday"); break;
+        case SUN: printf("Sunday"); break;
+        default: printf("Invalid Day");
+    }
+
+    return 0;
+}
+output:
+
+Enter day (0-6): 2
+Wednesday
