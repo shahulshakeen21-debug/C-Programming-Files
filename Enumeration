@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+enum day
+{
+    MON,
+    TUE,
+    WED,
+    THU,
+    FRI,
+    SAT,
+    SUN
+};
+
+int main()
+{
+    enum day today;
+
+    printf("Enter day (0-6): ");
+    scanf("%d", &today);
+
+
+    return 0;
+}
+output:
+
+Enter day (0-6): 3
+Value = 3
