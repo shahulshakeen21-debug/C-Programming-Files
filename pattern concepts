@@ -1,0 +1,341 @@
+1. Floyd triangle 
+
+#include<stdio.h>
+int main()
+{
+    int i,j,n =1;
+   {
+     for(i=0;i<=4;i++)
+        for(j=0;j<=i;j++)
+        {
+            printf("%d",n);
+            n++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+output:
+
+1
+23
+456
+78910
+1112131415
+
+2. pascal triangle 
+
+#include <stdio.h>
+int main()
+{
+    int i, j, n, c;
+
+    printf("Enter the number of rows: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++)
+    {
+        c = 1;
+        for(j = 0; j < n - i - 1; j++)
+        {
+            printf(" ");
+        }
+
+        for(j = 0; j <= i; j++)
+        {
+            printf("%d ", c);
+            c = c * (i - j) / (j + 1);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+output 
+
+Enter the number of rows: 5
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+
+3.print the following pattern
+
+#include<stdio.h>
+int main()
+{
+
+    int i,j,k;
+
+        for(i=1;i<=4;i++)
+
+    {
+        for(k=1;k<=5-i;k++)
+    {
+        printf(" ");
+    }
+    for(j=i;j<=2*i-1;j++)
+    {
+        printf("%d",j);
+    }
+    for(j=2*i-2;j>=i;j--)
+    {
+        printf("%d",j);
+    }
+    printf("\n");
+}
+   return 0;
+}
+output:
+
+   1
+   232
+  34543
+ 4567654
+
+ 4.print the pyramid pattern 
+
+ #include<stdio.h>
+int main()
+{
+    int i,j;
+    char ch ='A';
+
+    for(i=1;i<=4;i++)
+    {
+        for(j=  1;j<=i;j++)
+        {
+            printf("%c ",ch);
+        }
+        printf("\n");
+        ch++;
+    }
+    return 0;
+}
+
+output:
+
+A
+B B
+C C C
+D D D D
+
+5.print pyramid pattern in lowercase:
+
+#include<stdio.h>
+int main()
+{
+    int i,j;
+    char ch ='a';
+
+    for(i=1;i<=4;i++)
+    {
+        for(j=  1;j<=i;j++)
+        {
+            printf("%c ",ch);
+        }
+        printf("\n");
+        ch++;
+    }
+    return 0;
+}
+output:
+
+a
+b b
+c c c
+d d d d
+
+6.distance pattern
+
+#include <stdio.h>
+int main()
+{
+    int n;
+    int x = 0, y = 0;
+    int distance = 10;
+    int i;
+
+    scanf("%d", &n);
+    for(i = 1; i <= n; i++)
+    {
+        switch((i - 1) % 4)
+        {
+            case 0:
+                x += distance;
+                break;
+
+            case 1:
+                y += distance;
+                break;
+
+            case 2:
+                x -= distance;
+                break;
+
+            case 3:
+                y -= distance;
+                break;
+        }
+
+        distance += 10;
+    }
+
+    printf("%d %d", x, y);
+
+    return 0;
+}
+output:
+
+3
+-20 20
+
+2
+10 20
+
+7. fair price shop 
+
+#include <stdio.h>
+
+int main()
+{
+    int n, len;
+    int i;
+    int total, current;
+
+    scanf("%d %d", &n, &len);
+
+    total = n;
+
+    for(i = 2; i <= len; i++)
+    {
+        current = total - 1;
+        total += current;
+    }
+
+    printf("%d", total);
+
+    return 0;
+}
+
+output:
+
+4 2
+7
+
+8. positive integer pattern 
+
+#include <stdio.h>
+
+int main()
+{
+    int m, n, i;
+    int width = 0, temp;
+
+    scanf("%d %d", &m, &n);
+
+    temp = n;
+    while(temp > 0)
+    {
+        width++;
+        temp /= 10;
+    }
+
+    for(i = m; i <= n; i++)
+    {
+        printf("%0*d", width, i);
+
+        if(i != n)
+            printf(" ");
+    }
+
+    return 0;
+}
+
+output:
+
+5 10
+05 06 07 08 09 10
+
+9.terms of series 15th
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    if(n % 2 == 1)
+        printf("%d", ((n + 1) / 2 - 1) * 7);
+    else
+        printf("%d", (n / 2 - 1) * 6);
+
+    return 0;
+}
+output:
+
+15
+49
+
+10.nth series 
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, ans = 1;
+
+    scanf("%d", &n);
+
+    if(n % 2 == 1)
+    {
+        for(i = 1; i < (n + 1) / 2; i++)
+            ans *= 2;
+    }
+    else
+    {
+        for(i = 1; i < n / 2; i++)
+            ans *= 3;
+    }
+
+    printf("%d", ans);
+
+    return 0;
+}
+output:
+
+13
+64
+
+11.following series 
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, ans = 1;
+
+    scanf("%d", &n);
+
+    if(n % 2 == 1)
+    {
+        for(i = 1; i < (n + 1) / 2; i++)
+            ans *= 2;
+    }
+    else
+    {
+        for(i = 1; i < n / 2; i++)
+            ans *= 3;
+    }
+
+    printf("%d", ans);
+
+    return 0;
+}
+output:
+
+18
+6561
